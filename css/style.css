@@ -1,8 +1,13 @@
+/* @font-face {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    src: url(./font/CascadiaCodePL.ttf);
+  } */
+
 body {
     margin: 0;
     padding: 0;
     background-color: #0d001a;
-    font-family: Casadia Code PL;
+    font-family: "Casadia Code PL";
 
 }
 
