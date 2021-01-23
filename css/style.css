@@ -27,7 +27,7 @@ body {
 }
 
 .controls {
-    position: fixed;
+    position: absolute;
     height: 35px;
     width: 725px;
     display: block;
