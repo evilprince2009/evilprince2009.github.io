@@ -81,7 +81,6 @@ hide.addEventListener("click", (e) => {
     if (flip) {
         message.classList.add("flip");
         container.classList.add("flip");
-        // exit.classList.add("container");
     }
     else {
         message.classList.remove("flip");

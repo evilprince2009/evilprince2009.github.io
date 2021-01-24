@@ -8,7 +8,8 @@ export class HelpComponent {
         const firstPara = document.createElement("p");
         firstPara.innerHTML = `
         <span style="color: rgb(9, 197, 9);">&rArr;</span> Available commands listed below. Type <span
-                            style="font-weight: 300; color: aquamarine;">"cls"</span> to clear terminal.
+                            style="font-weight: 300; color: aquamarine;">"cls"</span> to clear & <span
+                            style="font-weight: 300; color: aquamarine;">"exit"</span> to close terminal.
         `;
         const list = document.createElement("ul");
         list.innerHTML = `

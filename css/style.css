@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #0d001a;
-    font-family: "Casadia Code PL";
+    font-family: 'Cascadia Mono', sans-serif;
 }
 
 .container {
@@ -10,6 +10,19 @@ body {
     justify-content: center;
     display: flex;
 	height: 100vh;
+}
+button {
+    border: none;
+    background: #f5084f; 
+    color:aliceblue;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 7px;
+    text-align: center;    
+}
+button:hover {
+    cursor: pointer;
+    background: #ffd518;
 }
 #terminal {
     border: 2px solid #240046;
@@ -93,7 +106,7 @@ body {
     margin-top: -2px;
     overflow: hidden;
     flex: 1 1;
-    background: none;
+    background: #0d001a;
     border: none;
     outline: none;
     color: #149BDA;
@@ -131,7 +144,7 @@ body {
 }
 
 #exception {
-    display: inline-block;
+    /* display: inherit; */
     margin-left: 10px;
 }
 
@@ -143,7 +156,8 @@ body {
 
 #help {
     margin-top: -15px;
-    display: inline-block;
+   /* display: inline-block; */
+	display: inline-grid;
 }
 
 #help p {
