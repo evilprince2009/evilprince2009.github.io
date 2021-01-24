@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'CascadiaCodePL';
+	font-family: 'Cascadia Code PL';
 	src: url(font/CascadiaCodePL.ttf);
 }
 
@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #0d001a;
-    font-family: 'CascadiaCodePL';
+    font-family: 'Cascadia Code PL';
 }
 
 .container {
