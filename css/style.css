@@ -2,11 +2,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #0d001a;
-    font-family: "Casadia Code PL";
+    font-family: 'CascadiaCodePL';
 }
 
 @font-face {
-	font-family: 'Cascadia Code PL';
+	font-family: 'CascadiaCodePL';
 	src: url(font/CascadiaCodePL.ttf);
 }
 
