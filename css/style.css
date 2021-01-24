@@ -1,25 +1,24 @@
-/* @font-face {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    src: url(./font/CascadiaCodePL.ttf);
-  } */
-
 body {
     margin: 0;
     padding: 0;
     background-color: #0d001a;
     font-family: "Casadia Code PL";
-
 }
 
+.container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+	height: 100vh;
+}
 #terminal {
     border: 2px solid #240046;
     border-radius: 10px;
     height: 410px;
     width: 735px;
-
     box-shadow: 0 0 10px 7px rgba(255, 255, 255, 0.1);
     flex-direction: column;
-   margin: 105px auto;
+   /* margin: 105px auto; */
     padding: 1rem;
     border-top: 0.5rem solid #0d001a;
     border-bottom: 0.5rem solid #0d001a;
@@ -219,7 +218,7 @@ body {
 
 .footer-on-exit {
     text-align: center;
-    left: 40%;
+    left: 38.5%; 
 }
 
 .vertical-center {

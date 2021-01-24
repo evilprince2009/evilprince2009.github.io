@@ -77,9 +77,11 @@ let flip = false;
 hide.addEventListener("click", (e) => {
     flip = !flip;
     const blink = container.querySelector("input:last-child");
+    const exit = document.querySelector(".terminal-exit");
     if (flip) {
         message.classList.add("flip");
         container.classList.add("flip");
+        // exit.classList.add("container");
     }
     else {
         message.classList.remove("flip");

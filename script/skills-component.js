@@ -16,7 +16,7 @@ export class SkillsComponent {
             <li><span style="color: #f5084f;">&starf;</span> Git / TFS</li>
             <li><span style="color: #f5084f;">&starf;</span> MSTEST / NUnit / xUnit / Selenium</li>
         </ul>
-        <p style="color: aquamarine;">Available for freelance , remote or contact based oppertunities.</p>
+        <p style="color: #64f105;"><span style="color: #fec304;">&rArr;</span> Available for freelance , remote or contact based oppertunities.</p>
         `;
         this.container.appendChild(skillsTemplate);
     }
