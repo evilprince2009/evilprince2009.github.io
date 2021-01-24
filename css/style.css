@@ -5,6 +5,11 @@ body {
     font-family: "Casadia Code PL";
 }
 
+@font-face {
+	font-family: 'Cascadia Code PL';
+	src: url(font/CascadiaCodePL.ttf);
+}
+
 .container {
     align-items: center;
     justify-content: center;
