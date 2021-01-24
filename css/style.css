@@ -148,7 +148,8 @@ body {
 
 #help {
     margin-top: -15px;
-    display: inline-block;
+   /* display: inline-block; */
+	display: inline-grid;
 }
 
 #help p {
