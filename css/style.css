@@ -1,10 +1,9 @@
-html {overflow: -moz-scrollbars-none;}
-
 body {
     margin: 0;
     padding: 0;
     background-color: #0d001a;
 font-family: 'Cascadia Mono', sans-serif;
+	scrollbar-width: none;
 }
 
 .container {
