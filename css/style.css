@@ -136,7 +136,7 @@ body {
 }
 
 #exception {
-    display: inline-block;
+    display: inherit;
     margin-left: 10px;
 }
 
