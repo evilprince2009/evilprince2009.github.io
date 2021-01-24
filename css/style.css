@@ -136,7 +136,7 @@ body {
 }
 
 #exception {
-    display: inherit;
+    /* display: inherit; */
     margin-left: 10px;
 }
 
