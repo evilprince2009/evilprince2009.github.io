@@ -11,7 +11,6 @@ const container = document.querySelector("#insert");
 const quit = document.querySelector("#quit");
 const footer = document.querySelector(".footer");
 const hide = document.querySelector("#hide");
-const box = document.querySelector(".container");
 const shell = new ShellComponent(container);
 // input focus on page load
 window.addEventListener("DOMContentLoaded", (e) => {
