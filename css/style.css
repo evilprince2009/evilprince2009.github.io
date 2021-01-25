@@ -7,29 +7,13 @@ body {
 }
 .container{align-items:center;justify-content:center;display:flex;height:100vh}
 
-button {
-    border: none;
-    background: #f5084f;
-    color: aliceblue;
-    font-size: 15px;
-    font-weight: 300;
-    padding: 7px;
-    text-align: center;
-}
-
-button:hover {
-    cursor: pointer;
-    background: #ffd518;
-}
-
 #terminal {
     border: 2px solid #240046;
     border-radius: 10px;
     height: 410px;
     width: 735px;
     box-shadow: 0 0 10px 7px rgba(255, 255, 255, 0.1);
-    flex-direction: column;
-    /* margin: 105px auto; */
+
     padding: 1rem;
     border-top: 0.5rem solid #0d001a;
     border-bottom: 0.5rem solid #0d001a;
@@ -39,6 +23,7 @@ button:hover {
     overflow-y: auto;
     overflow-x: hidden;
     -ms-overflow-style: none;
+    flex-direction: column;
 }
 
 .controls {
@@ -229,7 +214,8 @@ button:hover {
 
 .footer-on-exit {
     text-align: center;
-    left: 38.5%;
+    left: 38%;
+    right: 38%;
 }
 
 .vertical-center {
