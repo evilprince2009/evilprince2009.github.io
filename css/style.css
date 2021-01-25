@@ -3,27 +3,25 @@ body {
     padding: 0;
     background-color: #0d001a;
     font-family: 'Cascadia Mono', sans-serif;
+    font-weight: 400;
 }
+.container{align-items:center;justify-content:center;display:flex;height:100vh}
 
-.container {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-	height: 100vh;
-}
 button {
     border: none;
-    background: #f5084f; 
-    color:aliceblue;
+    background: #f5084f;
+    color: aliceblue;
     font-size: 15px;
     font-weight: 300;
     padding: 7px;
-    text-align: center;    
+    text-align: center;
 }
+
 button:hover {
     cursor: pointer;
     background: #ffd518;
 }
+
 #terminal {
     border: 2px solid #240046;
     border-radius: 10px;
@@ -31,7 +29,7 @@ button:hover {
     width: 735px;
     box-shadow: 0 0 10px 7px rgba(255, 255, 255, 0.1);
     flex-direction: column;
-   /* margin: 105px auto; */
+    /* margin: 105px auto; */
     padding: 1rem;
     border-top: 0.5rem solid #0d001a;
     border-bottom: 0.5rem solid #0d001a;
@@ -97,13 +95,13 @@ button:hover {
 
 #title {
     color: #fec303;
-    margin-top: 0px;
+    margin-top: 2px;
     float: left;
     overflow: hidden;
 }
 
 #command-input {
-    margin-top: -2px;
+    margin-top: 0px;
     overflow: hidden;
     flex: 1 1;
     background: #0d001a;
@@ -119,7 +117,6 @@ button:hover {
 
 #command-input:focus {
     caret-color: #f5084f;
-
 }
 
 .shell {
@@ -156,8 +153,8 @@ button:hover {
 
 #help {
     margin-top: -15px;
-   /* display: inline-block; */
-	display: inline-grid;
+    /* display: inline-block; */
+    display: inline-grid;
 }
 
 #help p {
@@ -232,7 +229,7 @@ button:hover {
 
 .footer-on-exit {
     text-align: center;
-    left: 38.5%; 
+    left: 38.5%;
 }
 
 .vertical-center {
@@ -241,7 +238,8 @@ button:hover {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-  }
-  .flip {
-      display: none;
-  }
+}
+
+.flip {
+    display: none;
+}
