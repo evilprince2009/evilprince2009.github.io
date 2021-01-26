@@ -16,8 +16,11 @@ export class ShellComponent {
         shellTemplate.appendChild(shellTitle);
         shellTemplate.appendChild(shellInput);
         this.container.appendChild(shellTemplate);
-        const f = document.querySelectorAll(".command");
-        const target = f[document.querySelectorAll(".command").length - 1];
-        target.focus();
+        this.shellFocus();
+    }
+    shellFocus() {
+        const target = document.querySelectorAll(".command");
+        const lastInput = target[document.querySelectorAll(".command").length - 1];
+        lastInput.focus();
     }
 }

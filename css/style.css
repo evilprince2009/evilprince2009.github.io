@@ -6,7 +6,6 @@ body {
     font-weight: 400;
 }
 
-
 .container {
     align-items: center;
     justify-content: center;
@@ -51,7 +50,7 @@ body {
 
 .controls ul li {
     list-style: none;
-    padding: 2px;
+    padding: 0px;
     cursor: pointer;
 }
 

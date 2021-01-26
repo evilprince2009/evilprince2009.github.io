@@ -12,7 +12,6 @@ const quit = document.querySelector("#quit");
 const footer = document.querySelector(".footer");
 const hide = document.querySelector("#hide");
 const shell = new ShellComponent(container);
-// input focus on page load
 window.addEventListener("DOMContentLoaded", (e) => {
     shell.render();
 });
@@ -75,8 +74,8 @@ quit.addEventListener("click", (e) => {
 });
 let flip = false;
 hide.addEventListener("click", (e) => {
+    e.preventDefault();
     flip = !flip;
-    const blink = container.querySelector("input:last-child");
     if (flip) {
         message.classList.add("flip");
         container.classList.add("flip");
@@ -84,6 +83,6 @@ hide.addEventListener("click", (e) => {
     else {
         message.classList.remove("flip");
         container.classList.remove("flip");
-        blink.focus();
+        shell.shellFocus();
     }
 });
