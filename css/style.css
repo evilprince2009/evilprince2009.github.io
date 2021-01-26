@@ -18,7 +18,6 @@ body {
     height: 410px;
     width: 735px;
     box-shadow: 0 0 10px 7px rgba(255, 255, 255, 0.1);
-
     padding: 1rem;
     border-top: 0.5rem solid #0d001a;
     border-bottom: 0.5rem solid #0d001a;
@@ -70,8 +69,6 @@ body {
     margin-top: 17px;
 }
 
-
-
 .footer {
     color: #fec303;
     text-align: right;
@@ -80,7 +77,6 @@ body {
     font-weight: 200;
     letter-spacing: 0.1em;
     margin-right: 25px;
-
 }
 
 #title {
@@ -144,7 +140,6 @@ body {
 
 #help {
     margin-top: -15px;
-    
     display: inline-grid;
 }
 
