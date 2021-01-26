@@ -75,6 +75,7 @@ quit.addEventListener("click", (e) => {
 });
 let flip = false;
 hide.addEventListener("click", (e) => {
+    e.preventDefault();
     flip = !flip;
     const blink = container.querySelector("input:last-child");
     if (flip) {
