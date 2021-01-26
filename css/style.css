@@ -51,7 +51,7 @@ body {
 
 .controls ul li {
     list-style: none;
-    padding: 0px;
+    padding: 1px;
     cursor: pointer;
 }
 
