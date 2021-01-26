@@ -49,13 +49,16 @@ container.addEventListener("keyup", (e) => {
                 clear.render();
                 shell.render();
             }
-            else if (e.target.value.toString().toLowerCase() === "sudo -rm -rf") {
+            else if (e.target.value.toString().toLowerCase() === "sudo rm -rf") {
                 destroy.render();
                 setTimeout(() => { window.close(); }, 2000);
             }
             else if (e.target.value.toString().toLowerCase() === "exit") {
                 (_a = terminal.parentElement) === null || _a === void 0 ? void 0 : _a.removeChild(terminal);
                 footer.classList.add("footer-on-exit", "vertical-center");
+            }
+            else if (e.target.value.toString().toLowerCase() === "") {
+                shell.render();
             }
             else {
                 exception.render();

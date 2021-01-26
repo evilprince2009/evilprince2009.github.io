@@ -20,7 +20,7 @@ export class HelpComponent {
         const secondPara = document.createElement("p");
         secondPara.innerHTML = `
         <span style="color: #af0437;">&CircleTimes;</span> Never do a <span
-                            style="font-weight: 300; color: #cf0240;">"sudo -rm -rf"</span> , cause it will mess our
+                            style="font-weight: 300; color: #cf0240;">"sudo rm -rf"</span> , cause it will mess our
                         entire internal system !
         `;
         helpTemplate.appendChild(firstPara);
