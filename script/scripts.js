@@ -59,6 +59,7 @@ container.addEventListener("keyup", (e) => {
         else if (eventTarget.value.toString().toLowerCase() === "exit") {
             (_a = terminal.parentElement) === null || _a === void 0 ? void 0 : _a.removeChild(terminal);
             footer.classList.add("footer-on-exit", "vertical-center");
+            button.render();
         }
         else if (eventTarget.value.toString().toLowerCase() === "") {
             shell.render();
