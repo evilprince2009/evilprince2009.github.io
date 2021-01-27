@@ -73,13 +73,14 @@ body {
 
 .footer {
     color: #fec303;
-    text-align: right;
+    text-align: center;
+    float: right;
+    overflow: hidden;
     margin-top: -45px;
     font-size: 12px;
     font-weight: 200;
     letter-spacing: 0.1em;
     margin-right: 25px;
-
 }
 
 .title {
@@ -216,19 +217,41 @@ body {
 }
 
 .footer-on-exit {
+    font-size: 15px;
     text-align: center;
-    left: 38%;
-    right: 38%;
+    left: 30%;
+    right: 30%;
 }
 
 .vertical-center {
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 53%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
 .flip {
     display: none;
+}
+
+.restore-button {
+    left: 30%;
+    right: 30%;
+    color: #38ee00;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px;
+    background: transparent;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.restore-button:hover {
+    background:#f5084f;
+    color: aliceblue;
+    border: 1px solid #f5084f;
 }

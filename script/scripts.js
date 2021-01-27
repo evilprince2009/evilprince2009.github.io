@@ -1,3 +1,4 @@
+import { ButtonComponent } from "./button-component.js";
 import { SudoRmRfComponent } from "./sudo-rm-rf-component.js";
 import { ContactComponent } from "./contact-component.js";
 import { SkillsComponent } from "./skills-component.js";
@@ -11,6 +12,7 @@ const container = document.querySelector("#insert");
 const quit = document.querySelector("#quit");
 const footer = document.querySelector(".footer");
 const hide = document.querySelector("#hide");
+const mainBody = document.querySelector(".container");
 const shell = new ShellComponent(container);
 window.addEventListener("DOMContentLoaded", (e) => {
     shell.render();
@@ -18,6 +20,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
 const help = new HelpComponent(container);
 const clear = new ClearComponent(container);
 const exception = new ExceptionComponent(container);
+const button = new ButtonComponent(mainBody);
 const about = new AboutComponent(container);
 const skills = new SkillsComponent(container);
 const contact = new ContactComponent(container);
@@ -26,37 +29,38 @@ const message = document.querySelector(".message");
 container.addEventListener("keyup", (e) => {
     var _a;
     e.preventDefault();
-    if (e.target.className === "command" && e.key === "Enter") {
-        e.target.disabled = true;
-        if (e.target.value.toString().toLowerCase() === "help") {
+    const eventTarget = e.target;
+    if (eventTarget.className === "command" && e.key === "Enter") {
+        eventTarget.disabled = true;
+        if (eventTarget.value.toString().toLowerCase() === "help") {
             help.render();
             shell.render();
         }
-        else if (e.target.value.toString().toLowerCase() === "about") {
+        else if (eventTarget.value.toString().toLowerCase() === "about") {
             about.render();
             shell.render();
         }
-        else if (e.target.value.toString().toLowerCase() === "skills") {
+        else if (eventTarget.value.toString().toLowerCase() === "skills") {
             skills.render();
             shell.render();
         }
-        else if (e.target.value.toString().toLowerCase() === "contact") {
+        else if (eventTarget.value.toString().toLowerCase() === "contact") {
             contact.render();
             shell.render();
         }
-        else if (container !== null && e.target.value.toString().toLowerCase() === "cls") {
+        else if (container !== null && eventTarget.value.toString().toLowerCase() === "cls") {
             clear.render();
             shell.render();
         }
-        else if (e.target.value.toString().toLowerCase() === "sudo rm -rf") {
+        else if (eventTarget.value.toString().toLowerCase() === "sudo rm -rf") {
             destroy.render();
             setTimeout(() => { window.close(); }, 2000);
         }
-        else if (e.target.value.toString().toLowerCase() === "exit") {
+        else if (eventTarget.value.toString().toLowerCase() === "exit") {
             (_a = terminal.parentElement) === null || _a === void 0 ? void 0 : _a.removeChild(terminal);
             footer.classList.add("footer-on-exit", "vertical-center");
         }
-        else if (e.target.value.toString().toLowerCase() === "") {
+        else if (eventTarget.value.toString().toLowerCase() === "") {
             shell.render();
         }
         else {
@@ -70,6 +74,7 @@ quit.addEventListener("click", (e) => {
     e.preventDefault();
     (_a = terminal.parentElement) === null || _a === void 0 ? void 0 : _a.removeChild(terminal);
     footer.classList.add("footer-on-exit", "vertical-center");
+    button.render();
 });
 let flip = false;
 hide.addEventListener("click", (e) => {
@@ -83,5 +88,14 @@ hide.addEventListener("click", (e) => {
         message.classList.remove("flip");
         container.classList.remove("flip");
         shell.shellFocus();
+    }
+});
+mainBody.addEventListener("click", (e) => {
+    var _a;
+    const targetButton = e.target;
+    if (targetButton.className === "restore-button") {
+        (_a = targetButton.parentElement) === null || _a === void 0 ? void 0 : _a.removeChild(targetButton);
+        footer.classList.remove("footer-on-exit", "vertical-center");
+        location.reload();
     }
 });
