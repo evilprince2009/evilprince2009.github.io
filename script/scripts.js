@@ -27,7 +27,6 @@ const about = new AboutComponent(container);
 const skills = new SkillsComponent(container);
 const contact = new ContactComponent(container);
 const destroy = new SudoRmRfComponent(terminal);
-const message = document.querySelector(".message");
 container.addEventListener("keyup", (e) => {
     var _a;
     e.preventDefault();

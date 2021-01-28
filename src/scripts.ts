@@ -31,7 +31,6 @@ const about: IComponent = new AboutComponent(container);
 const skills: IComponent = new SkillsComponent(container);
 const contact: IComponent = new ContactComponent(container);
 const destroy: IComponent = new SudoRmRfComponent(terminal);
-const message: HTMLDivElement = document.querySelector(".message") as HTMLDivElement;
 
 container.addEventListener("keyup", (e: KeyboardEvent) => {
     e.preventDefault();

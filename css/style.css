@@ -1,5 +1,8 @@
 body {
-    margin: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
     background-color: #0d001a;
     font-family: 'Cascadia Mono', sans-serif;
@@ -10,7 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
-    height: 100vh;
+    height: 94vh;
 }
 
 #terminal {
@@ -238,7 +241,7 @@ body {
     overflow: hidden;
     color: #f56201;
     text-align: left;
-    margin-top: -50px;
+    margin-top: -30px;
     margin-left: 30px;
     cursor: pointer;
 }
@@ -251,7 +254,7 @@ body {
     text-align: center;
     float: right;/* 
     overflow: hidden; */
-    margin-top: -50px;
+    margin-top: -30px;
     font-size: 12px;
     font-weight: 200;
     letter-spacing: 0.1em;
@@ -267,4 +270,23 @@ body {
 
 .flip {
     display: none;
+}
+.visitor {
+    margin-bottom: -15px;
+    
+    
+}
+.visitor p {
+    color: #fec303;
+    text-align: left;
+    /* padding-right: 30px; */
+    /* padding-left: 30px; */
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+
+}
+
+#count {
+    color: rgb(19, 255, 255);
 }
