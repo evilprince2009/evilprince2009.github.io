@@ -13,8 +13,10 @@ const quit = document.querySelector("#quit");
 const footer = document.querySelector(".footer");
 const hide = document.querySelector("#hide");
 const mainBody = document.querySelector(".container");
+const maximizeBox = document.querySelector(".maximize-terminal");
 const shell = new ShellComponent(container);
 window.addEventListener("DOMContentLoaded", (e) => {
+    maximizeBox.classList.add("flip");
     shell.render();
 });
 const help = new HelpComponent(container);
@@ -82,14 +84,18 @@ hide.addEventListener("click", (e) => {
     e.preventDefault();
     flip = !flip;
     if (flip) {
-        message.classList.add("flip");
-        container.classList.add("flip");
+        terminal.classList.add("flip");
+        maximizeBox.classList.remove("flip");
     }
     else {
         message.classList.remove("flip");
         container.classList.remove("flip");
         shell.shellFocus();
     }
+});
+maximizeBox.addEventListener("click", (e) => {
+    terminal.classList.remove("flip");
+    maximizeBox.classList.add("flip");
 });
 mainBody.addEventListener("click", (e) => {
     var _a;

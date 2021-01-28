@@ -1,3 +1,4 @@
+import { IComponent } from "./IComponents.js";
 import { ButtonComponent } from "./button-component.js";
 import { SudoRmRfComponent } from "./sudo-rm-rf-component.js";
 import { ContactComponent } from "./contact-component.js";
@@ -6,9 +7,7 @@ import { AboutComponent } from "./about-component.js";
 import { ShellComponent } from "./shell-component.js";
 import { ExceptionComponent } from "./exception-component.js";
 import { ClearComponent } from "./clear-component.js";
-import { IComponent } from "./IComponents.js";
 import { HelpComponent } from "./help-component.js";
-
 
 const terminal: HTMLDivElement = document.querySelector("#terminal") as HTMLDivElement;
 const container: HTMLDivElement = document.querySelector("#insert") as HTMLDivElement;
@@ -16,9 +15,11 @@ const quit: HTMLElement = document.querySelector("#quit") as HTMLElement;
 const footer: HTMLDivElement = document.querySelector(".footer") as HTMLDivElement;
 const hide: HTMLElement = document.querySelector("#hide") as HTMLElement;
 const mainBody: HTMLDivElement = document.querySelector(".container") as HTMLInputElement;
+const maximizeBox: HTMLDivElement = document.querySelector(".maximize-terminal") as HTMLDivElement;
 
 const shell: ShellComponent = new ShellComponent(container);
 window.addEventListener("DOMContentLoaded", (e: Event) => {
+    maximizeBox.classList.add("flip");
    shell.render();
 });
 
@@ -80,13 +81,18 @@ hide.addEventListener("click", (e: Event) => {
     e.preventDefault();
     flip = !flip;
     if (flip) {
-        message.classList.add("flip");
-        container.classList.add("flip");
+        terminal.classList.add("flip");
+        maximizeBox.classList.remove("flip");
     } else {
         message.classList.remove("flip");
         container.classList.remove("flip");
         shell.shellFocus();
     }
+});
+
+maximizeBox.addEventListener("click", (e: Event) => {
+    terminal.classList.remove("flip");
+    maximizeBox.classList.add("flip");
 });
 
 mainBody.addEventListener("click", (e: Event) => {
