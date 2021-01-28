@@ -76,23 +76,16 @@ quit.addEventListener("click", (e: Event) => {
     button.render();
 });
 
-let flip: boolean = false;
 hide.addEventListener("click", (e: Event) => {
     e.preventDefault();
-    flip = !flip;
-    if (flip) {
-        terminal.classList.add("flip");
-        maximizeBox.classList.remove("flip");
-    } else {
-        message.classList.remove("flip");
-        container.classList.remove("flip");
-        shell.shellFocus();
-    }
+    terminal.classList.add("flip");
+    maximizeBox.classList.remove("flip");
 });
 
 maximizeBox.addEventListener("click", (e: Event) => {
-    terminal.classList.remove("flip");
     maximizeBox.classList.add("flip");
+    terminal.classList.remove("flip");
+    shell.shellFocus();
 });
 
 mainBody.addEventListener("click", (e: Event) => {

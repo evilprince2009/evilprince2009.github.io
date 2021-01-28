@@ -79,23 +79,15 @@ quit.addEventListener("click", (e) => {
     footer.classList.add("footer-on-exit", "vertical-center");
     button.render();
 });
-let flip = false;
 hide.addEventListener("click", (e) => {
     e.preventDefault();
-    flip = !flip;
-    if (flip) {
-        terminal.classList.add("flip");
-        maximizeBox.classList.remove("flip");
-    }
-    else {
-        message.classList.remove("flip");
-        container.classList.remove("flip");
-        shell.shellFocus();
-    }
+    terminal.classList.add("flip");
+    maximizeBox.classList.remove("flip");
 });
 maximizeBox.addEventListener("click", (e) => {
-    terminal.classList.remove("flip");
     maximizeBox.classList.add("flip");
+    terminal.classList.remove("flip");
+    shell.shellFocus();
 });
 mainBody.addEventListener("click", (e) => {
     var _a;
