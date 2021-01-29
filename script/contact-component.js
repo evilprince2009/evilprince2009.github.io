@@ -14,7 +14,7 @@ export class ContactComponent {
             <li><span style="color: rgb(9, 197, 9);">&rArr;</span> <a href="https://bn.quora.com/profile/%E0%A6%87%E0%A6%AC%E0%A6%A8%E0%A7%87-%E0%A6%A8%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%A8-Ibne-Nahian" target="_blank">Quora</a></li>
         </ul>
 
-        <p>Don't hesitate to send me a <span style="color: #ccc">'Hello World'</span> via any of those !</p>
+        <p>Don't hesitate to send me a <span style="color: #ccc;">'Hello World'</span> via any of those !</p>
         `;
         this.container.appendChild(contactTemplate);
     }
