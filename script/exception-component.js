@@ -1,14 +1,1 @@
-export class ExceptionComponent {
-    constructor(container) {
-        this.container = container;
-    }
-    render() {
-        const errorTemplate = document.createElement("div");
-        errorTemplate.id = "exception";
-        errorTemplate.innerHTML = `<p><span style="color: #e70347;"> Error thrown : InvalidCommandException !</span>
-        <br>
-            <span style="color: #fce26e;">Type <span style="color: aquamarine;">"help"</span> or <span
-                    style="color: aquamarine;">"cls"</span> for assistance.</span></p>`;
-        this.container.appendChild(errorTemplate);
-    }
-}
+export class ExceptionComponent{constructor(n){this.container=n}render(){const n=document.createElement("div");n.id="exception",n.innerHTML='<p><span style="color: #e70347;"> Error thrown : InvalidCommandException !</span>\n        <br>\n            <span style="color: #fce26e;">Type <span style="color: aquamarine;">"help"</span> or <span\n                    style="color: aquamarine;">"cls"</span> for assistance.</span></p>',this.container.appendChild(n)}}

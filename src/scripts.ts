@@ -8,7 +8,6 @@ import { ShellComponent } from "./shell-component.js";
 import { ExceptionComponent } from "./exception-component.js";
 import { ClearComponent } from "./clear-component.js";
 import { HelpComponent } from "./help-component.js";
-// import { FileWriter } from "./visitor-counter.js";
 
 const terminal: HTMLDivElement = document.querySelector("#terminal") as HTMLDivElement;
 const container: HTMLDivElement = document.querySelector("#insert") as HTMLDivElement;

@@ -1,11 +1,1 @@
-export class ClearComponent {
-    constructor(container) {
-        this.container = container;
-    }
-    render() {
-        Array.from(this.container.children).forEach(child => {
-            var _a;
-            (_a = child.parentElement) === null || _a === void 0 ? void 0 : _a.removeChild(child);
-        });
-    }
-}
+export class ClearComponent{constructor(r){this.container=r}render(){Array.from(this.container.children).forEach(r=>{var e;null===(e=r.parentElement)||void 0===e||e.removeChild(r)})}}
