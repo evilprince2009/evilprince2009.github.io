@@ -8,6 +8,7 @@ import { ShellComponent } from "./shell-component.js";
 import { ExceptionComponent } from "./exception-component.js";
 import { ClearComponent } from "./clear-component.js";
 import { HelpComponent } from "./help-component.js";
+// import { FileWriter } from "./visitor-counter.js";
 
 const terminal: HTMLDivElement = document.querySelector("#terminal") as HTMLDivElement;
 const container: HTMLDivElement = document.querySelector("#insert") as HTMLDivElement;
@@ -16,11 +17,13 @@ const footer: HTMLDivElement = document.querySelector(".footer") as HTMLDivEleme
 const hide: HTMLElement = document.querySelector("#hide") as HTMLElement;
 const mainBody: HTMLDivElement = document.querySelector(".container") as HTMLInputElement;
 const maximizeBox: HTMLDivElement = document.querySelector(".maximize-terminal") as HTMLDivElement;
+const commandCount:HTMLSpanElement = document.querySelector(".count") as HTMLSpanElement;
 
 const shell: ShellComponent = new ShellComponent(container);
+
 window.addEventListener("DOMContentLoaded", (e: Event) => {
     maximizeBox.classList.add("flip");
-   shell.render();
+    shell.render();
 });
 
 const help: IComponent = new HelpComponent(container);
@@ -37,6 +40,7 @@ container.addEventListener("keyup", (e: KeyboardEvent) => {
     const eventTarget: HTMLInputElement = e.target as HTMLInputElement;
     if (eventTarget.className === "command" && e.key === "Enter") {
         eventTarget.disabled = true;
+
         if (eventTarget.value.toString().toLowerCase() === "help") {
             help.render();
             shell.render();

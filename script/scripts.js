@@ -7,6 +7,7 @@ import { ShellComponent } from "./shell-component.js";
 import { ExceptionComponent } from "./exception-component.js";
 import { ClearComponent } from "./clear-component.js";
 import { HelpComponent } from "./help-component.js";
+// import { FileWriter } from "./visitor-counter.js";
 const terminal = document.querySelector("#terminal");
 const container = document.querySelector("#insert");
 const quit = document.querySelector("#quit");
@@ -14,6 +15,7 @@ const footer = document.querySelector(".footer");
 const hide = document.querySelector("#hide");
 const mainBody = document.querySelector(".container");
 const maximizeBox = document.querySelector(".maximize-terminal");
+const commandCount = document.querySelector(".count");
 const shell = new ShellComponent(container);
 window.addEventListener("DOMContentLoaded", (e) => {
     maximizeBox.classList.add("flip");
