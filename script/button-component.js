@@ -1,1 +1,0 @@
-export class ButtonComponent{constructor(t){this.container=t}render(){const t=document.createElement("p");t.classList.add("restore-button"),t.innerHTML="Back to Terminal &DoubleLongRightArrow;",this.container.appendChild(t)}}
