@@ -1,1 +1,0 @@
-export class ClearComponent{constructor(r){this.container=r}render(){Array.from(this.container.children).forEach(r=>{var e;null===(e=r.parentElement)||void 0===e||e.removeChild(r)})}}
