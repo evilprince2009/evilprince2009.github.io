@@ -1,13 +1,13 @@
-import { IComponent } from "./IComponents.js";
+import { IComponent } from "./IComponents";
 
 export class ContactComponent implements IComponent {
-    constructor(private container: HTMLDivElement) {}
+  constructor(private container: HTMLDivElement) {}
 
-    render(): void {
-        const contactTemplate: HTMLDivElement = document.createElement("div");
-        contactTemplate.classList.add("contact");
+  render(): void {
+    const contactTemplate: HTMLDivElement = document.createElement("div");
+    contactTemplate.classList.add("contact");
 
-        contactTemplate.innerHTML = `
+    contactTemplate.innerHTML = `
         <p>In case you need me , drop a message via <a href="mailto:evilprince2009@gmail.com">evilprince2009@gmail.com</a>. I assure you to get back to you as soon as I can.<br>Are you social ? Clickable <span style="color:aqua;">links</span> below.</p>
 
         <ul>
@@ -19,6 +19,6 @@ export class ContactComponent implements IComponent {
         <p>Don't hesitate to send me a 'Hello World' via any of those !</p>
         `;
 
-        this.container.appendChild(contactTemplate);
-    }
+    this.container.appendChild(contactTemplate);
+  }
 }

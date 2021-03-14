@@ -1,30 +1,33 @@
-import { IComponent } from "./IComponents.js";
-import { ButtonComponent } from "./button-component.js";
-import { SudoRmRfComponent } from "./sudo-rm-rf-component.js";
-import { ContactComponent } from "./contact-component.js";
-import { SkillsComponent } from "./skills-component.js";
-import { AboutComponent } from "./about-component.js";
-import { ShellComponent } from "./shell-component.js";
-import { ExceptionComponent } from "./exception-component.js";
-import { ClearComponent } from "./clear-component.js";
-import { HelpComponent } from "./help-component.js";
+import { AboutComponent } from "./about-component";
+import { ButtonComponent } from "./button-component";
+import { ClearComponent } from "./clear-component";
+import { ContactComponent } from "./contact-component";
+import { ExceptionComponent } from "./exception-component";
+import { HelpComponent } from "./help-component";
+import { IComponent } from "./IComponents";
+import { ShellComponent } from "./shell-component";
+import { SkillsComponent } from "./skills-component";
+import { SudoRmRfComponent } from "./sudo-rm-rf-component";
 
-const terminal: HTMLDivElement = document.querySelector("#terminal") as HTMLDivElement;
-const container: HTMLDivElement = document.querySelector("#insert") as HTMLDivElement;
+const terminal: HTMLDivElement = document.querySelector(
+  "#terminal"
+) as HTMLDivElement;
+const container: HTMLDivElement = document.querySelector(
+  "#insert"
+) as HTMLDivElement;
 const quit: HTMLElement = document.querySelector("#quit") as HTMLElement;
-const footer: HTMLDivElement = document.querySelector(".footer") as HTMLDivElement;
+const footer: HTMLDivElement = document.querySelector(
+  ".footer"
+) as HTMLDivElement;
 const hide: HTMLElement = document.querySelector("#hide") as HTMLElement;
-const mainBody: HTMLDivElement = document.querySelector(".container") as HTMLInputElement;
-const maximizeBox: HTMLDivElement = document.querySelector(".maximize-terminal") as HTMLDivElement;
-const commandCount:HTMLSpanElement = document.querySelector(".count") as HTMLSpanElement;
+const mainBody: HTMLDivElement = document.querySelector(
+  ".container"
+) as HTMLInputElement;
+const maximizeBox: HTMLDivElement = document.querySelector(
+  ".maximize-terminal"
+) as HTMLDivElement;
 
 const shell: ShellComponent = new ShellComponent(container);
-
-window.addEventListener("DOMContentLoaded", (e: Event) => {
-    maximizeBox.classList.add("flip");
-    shell.render();
-});
-
 const help: IComponent = new HelpComponent(container);
 const clear: IComponent = new ClearComponent(container);
 const exception: IComponent = new ExceptionComponent(container);
@@ -34,67 +37,89 @@ const skills: IComponent = new SkillsComponent(container);
 const contact: IComponent = new ContactComponent(container);
 const destroy: IComponent = new SudoRmRfComponent(terminal);
 
-container.addEventListener("keyup", (e: KeyboardEvent) => {
-    e.preventDefault();
-    const eventTarget: HTMLInputElement = e.target as HTMLInputElement;
-    if (eventTarget.className === "command" && e.key === "Enter") {
-        eventTarget.disabled = true;
+window.addEventListener("DOMContentLoaded", (e: Event) => {
+  maximizeBox.classList.add("flip");
+  shell.render();
+});
 
-        if (eventTarget.value.toString().toLowerCase() === "help") {
-            help.render();
-            shell.render();
-        } else if (eventTarget.value.toString().toLowerCase() === "about") {
-            about.render();
-            shell.render();
-        } else if (eventTarget.value.toString().toLowerCase() === "skills") {
-            skills.render();
-            shell.render();
-        } else if (eventTarget.value.toString().toLowerCase() === "contact") {
-            contact.render();
-            shell.render();
-        } else if (container !== null && eventTarget.value.toString().toLowerCase() === "cls") {
-            clear.render();
-            shell.render();
-        } else if (eventTarget.value.toString().toLowerCase() === "sudo rm -rf") {
-            destroy.render();
-            setTimeout(() => { window.close(); }, 2000);
-        } else if (eventTarget.value.toString().toLowerCase() === "exit") {
-            terminal.parentElement?.removeChild(terminal);
-            footer.classList.add("footer-on-exit", "vertical-center");
-            button.render();
-        } else if (eventTarget.value.toString().toLowerCase() === "") {
-            shell.render();
-        } else {
-            exception.render();
-            shell.render();
-        }
+container.addEventListener("keyup", (e: KeyboardEvent) => {
+  e.preventDefault();
+  const eventTarget: HTMLInputElement = e.target as HTMLInputElement;
+  if (eventTarget.className === "command" && e.key === "Enter") {
+    eventTarget.disabled = true;
+
+    if (eventTarget.value.toString().toLowerCase() === "help") {
+      help.render();
+      shell.render();
+    } else if (eventTarget.value.toString().toLowerCase() === "about") {
+      about.render();
+      shell.render();
+    } else if (eventTarget.value.toString().toLowerCase() === "skills") {
+      skills.render();
+      shell.render();
+    } else if (eventTarget.value.toString().toLowerCase() === "contact") {
+      contact.render();
+      shell.render();
+    } else if (
+      container !== null &&
+      eventTarget.value.toString().toLowerCase() === "cls"
+    ) {
+      clear.render();
+      shell.render();
+    } else if (eventTarget.value.toString().toLowerCase() === "sudo rm -rf") {
+      destroy.render();
+      setTimeout(() => {
+        window.close();
+      }, 2000);
+    } else if (eventTarget.value.toString().toLowerCase() === "exit") {
+      terminal.parentElement?.removeChild(terminal);
+      footer.classList.add("footer-on-exit", "vertical-center");
+      button.render();
+    } else if (
+      eventTarget.value.toString().toLowerCase() === "" ||
+      whitespace(eventTarget.value.toString())
+    ) {
+      shell.render();
+    } else {
+      exception.render();
+      shell.render();
     }
+  }
 });
 
 quit.addEventListener("click", (e: Event) => {
-    e.preventDefault();
-    terminal.parentElement?.removeChild(terminal);
-    footer.classList.add("footer-on-exit", "vertical-center");
-    button.render();
+  e.preventDefault();
+  terminal.parentElement?.removeChild(terminal);
+  footer.classList.add("footer-on-exit", "vertical-center");
+  button.render();
 });
 
 hide.addEventListener("click", (e: Event) => {
-    e.preventDefault();
-    terminal.classList.add("flip");
-    maximizeBox.classList.remove("flip");
+  e.preventDefault();
+  terminal.classList.add("flip");
+  maximizeBox.classList.remove("flip");
 });
 
 maximizeBox.addEventListener("click", (e: Event) => {
-    maximizeBox.classList.add("flip");
-    terminal.classList.remove("flip");
-    shell.shellFocus();
+  maximizeBox.classList.add("flip");
+  terminal.classList.remove("flip");
+  shell.shellFocus();
 });
 
 mainBody.addEventListener("click", (e: Event) => {
-    const targetButton: HTMLParagraphElement = e.target as HTMLParagraphElement;
-    if (targetButton.className === "restore-button") {
-        targetButton.parentElement?.removeChild(targetButton);
-        footer.classList.remove("footer-on-exit", "vertical-center");
-        location.reload();
-    }
+  const targetButton: HTMLParagraphElement = e.target as HTMLParagraphElement;
+  if (targetButton.className === "restore-button") {
+    targetButton.parentElement?.removeChild(targetButton);
+    footer.classList.remove("footer-on-exit", "vertical-center");
+    location.reload();
+  }
 });
+
+let whitespace: (input: string) => boolean = (input_string: string) => {
+  for (let i = 0; i < input_string.length; i++) {
+    if (input_string[i] != " ") {
+      return false;
+    }
+  }
+  return true;
+};
