@@ -48,37 +48,33 @@ container.addEventListener("keyup", (e: KeyboardEvent) => {
   if (eventTarget.className === "command" && e.key === "Enter") {
     eventTarget.disabled = true;
 
-    if (eventTarget.value.toString().toLowerCase() === "help") {
+    const input_value: string = eventTarget.value.toString().toLowerCase();
+
+    if (input_value === "help") {
       help.render();
       shell.render();
-    } else if (eventTarget.value.toString().toLowerCase() === "about") {
+    } else if (input_value === "about") {
       about.render();
       shell.render();
-    } else if (eventTarget.value.toString().toLowerCase() === "skills") {
+    } else if (input_value === "skills") {
       skills.render();
       shell.render();
-    } else if (eventTarget.value.toString().toLowerCase() === "contact") {
+    } else if (input_value === "contact") {
       contact.render();
       shell.render();
-    } else if (
-      container !== null &&
-      eventTarget.value.toString().toLowerCase() === "cls"
-    ) {
+    } else if (container !== null && input_value === "cls") {
       clear.render();
       shell.render();
-    } else if (eventTarget.value.toString().toLowerCase() === "sudo rm -rf") {
+    } else if (input_value === "sudo rm -rf") {
       destroy.render();
       setTimeout(() => {
         window.close();
       }, 2000);
-    } else if (eventTarget.value.toString().toLowerCase() === "exit") {
+    } else if (input_value === "exit") {
       terminal.parentElement?.removeChild(terminal);
       footer.classList.add("footer-on-exit", "vertical-center");
       button.render();
-    } else if (
-      eventTarget.value.toString().toLowerCase() === "" ||
-      whitespace(eventTarget.value.toString())
-    ) {
+    } else if (input_value === "" || whitespace_checker(input_value)) {
       shell.render();
     } else {
       exception.render();
@@ -115,7 +111,7 @@ mainBody.addEventListener("click", (e: Event) => {
   }
 });
 
-let whitespace: (input: string) => boolean = (input_string: string) => {
+let whitespace_checker: (input: string) => boolean = (input_string: string) => {
   for (let i = 0; i < input_string.length; i++) {
     if (input_string[i] != " ") {
       return false;
