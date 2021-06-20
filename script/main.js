@@ -1,5 +1,8 @@
 /*
  * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * PROJECT NAME: ShellFolio
+ * AUTHOR NAME: IBNE NAHIAN
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
  * This devtool is neither made for production nor for readable output files.
  * It uses "eval()" calls to create a separate source file in the browser devtools.
  * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
