@@ -16,6 +16,10 @@
 - ⚡ `quora` - Takes you to my Quora profile.
 - ⚡ `sudo rm -rf` - Never run this command on terminal.
 
+### Note: All commands are case insensitive.
+
 #### `sudo rm -rf` Page design
 
 ![sudo rm -rf](https://github.com/evilprince2009/evilprince2009.github.io/blob/main/Screenshots/sudo%20rn%20-rf.png)
+
+### ![Ibne Nahian](https://www.facebook.com/evilprince2009)
