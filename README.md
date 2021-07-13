@@ -5,8 +5,8 @@
 ### Available commands
 
 ```
-- help - The most basic command, this will show you the available commands.
-- about - Shows my basic overview.
+=> help - The most basic command, this will show you the available commands.
+=> about - Shows my basic overview.
 => skills - Shows my skills.
 => contact - Shows my contact information & social media links.
 => cls - Clears the terminal.
