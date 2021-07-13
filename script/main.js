@@ -1,6 +1,7 @@
 /*
  * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
  * Project: ShellFolio
+ * Description: A Terminal styled portfolio Website
  * Author: Ibne Nahian
  * Project URL: https://github.com/evilprince2009/evilprince2009.github.io
  * This devtool is neither made for production nor for readable output files.
