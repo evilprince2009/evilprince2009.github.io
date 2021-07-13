@@ -1,4 +1,4 @@
-#ShellFolio
+# ShellFolio
 
 ## Terminal style Portfolio website
 
