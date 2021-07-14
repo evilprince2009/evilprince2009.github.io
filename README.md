@@ -4,7 +4,7 @@
 
 Written using:
 
-- HTML5 (No Templates or Boilplate used)
+- HTML5 (No Templates or Boilerplate used)
 - CSS3 (Pure CSS , no Frameworks or Libraries used)
 - TypeScript (ES6)
 
