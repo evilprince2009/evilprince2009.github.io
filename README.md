@@ -26,7 +26,7 @@ Tools used:
 - ⚡ `linkedin` - Takes you to my LinkedIn profile.
 - ⚡ `quora` - Takes you to my Quora profile.
 - ⚡ `sudo rm -rf` - Never run this command on terminal.
-- ⚡ `` or other whitespace - Will just render the shell.
+- ⚡ Any whitespace or null value will just render the shell.
 
 ### Note: All commands are case insensitive.
 
