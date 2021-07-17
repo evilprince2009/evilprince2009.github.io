@@ -29,7 +29,9 @@ Tools used:
 - ⚡ `sudo rm -rf` - Never run this command on terminal.
 - ⚡ Any whitespace or null value will just render the shell.
 
-### This is what happens you type an invalid command.
+### Use commands only from above lis.
+
+### This is what happens when you type an invalid command.
 
 ![Invalid Command](https://github.com/evilprince2009/evilprince2009.github.io/blob/main/Screenshots/invalid%20command.png)
 
