@@ -37,7 +37,7 @@ Tools used:
 
 ### Note: All commands are case insensitive.
 
-#### `sudo rm -rf` Page design
+Response to `sudo rm -rf` command.
 
 ![sudo rm -rf](https://github.com/evilprince2009/evilprince2009.github.io/blob/main/Screenshots/sudo%20rn%20-rf.png)
 
