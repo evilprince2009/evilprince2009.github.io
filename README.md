@@ -29,9 +29,9 @@ Tools used:
 - ⚡ `sudo rm -rf` - Never run this command on terminal.
 - ⚡ Any whitespace or null value will just render the shell.
 
-### Use commands only from above lis.
+### Use commands only from above list
 
-### This is what happens when you type an invalid command.
+### This is what happens when you type an invalid command
 
 ![Invalid Command](https://github.com/evilprince2009/evilprince2009.github.io/blob/main/Screenshots/invalid%20command.png)
 
@@ -39,7 +39,7 @@ Response to `sudo rm -rf` command.
 
 ![sudo rm -rf](https://github.com/evilprince2009/evilprince2009.github.io/blob/main/Screenshots/sudo%20rn%20-rf.png)
 
-### Note: All commands are case insensitive.
+### Note: All commands are case insensitive
 
 ### Limitations
 
