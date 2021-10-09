@@ -292,3 +292,12 @@ body {
 .uuid {
   color: #fce26e;
 }
+
+.arrow-success,
+.arrow {
+  color: #64f105;
+}
+
+.arrow-error {
+  color: #fec303;
+}
