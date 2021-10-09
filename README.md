@@ -20,7 +20,7 @@ Tools used:
 - ⚡ `about` - Shows my basic overview.
 - ⚡ `skills` - Shows my skills.
 - ⚡ `contact` - Shows my contact information & social media links.
-- ⚡ `cls` - Clears the terminal.
+- ⚡ `cls` / `clear` - Clears the terminal.
 - ⚡ `exit` - Exits the the terminal.
 - ⚡ `facebook` - Takes you to my Facebook profile.
 - ⚡ `github` - Takes you to my GitHub profile.
