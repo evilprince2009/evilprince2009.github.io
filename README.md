@@ -26,6 +26,7 @@ Tools used:
 - ⚡ `github` - Takes you to my GitHub profile.
 - ⚡ `linkedin` - Takes you to my LinkedIn profile.
 - ⚡ `quora` - Takes you to my Quora profile.
+- ⚡ `reload` - Reloads the current Browser window with a new user session & UUID.
 - ⚡ `sudo rm -rf` - Never run this command on terminal.
 - ⚡ Any whitespace or null value will just render the shell.
 
