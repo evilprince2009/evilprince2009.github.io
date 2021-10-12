@@ -23,7 +23,7 @@ Tools used:
 - ⚡ `cls` / `clear` - Clears the terminal.
 - ⚡ `exit` - Exits the the terminal.
 - ⚡ `facebook` / `fb` - Takes you to my Facebook profile.
-- ⚡ `github` - Takes you to my GitHub profile.
+- ⚡ `github` / `gh` - Takes you to my GitHub profile.
 - ⚡ `linkedin` - Takes you to my LinkedIn profile.
 - ⚡ `quora` - Takes you to my Quora profile.
 - ⚡ `reload` - Reloads the current Browser window with a new user session & UUID.
