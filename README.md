@@ -22,7 +22,7 @@ Tools used:
 - ⚡ `contact` - Shows my contact information & social media links.
 - ⚡ `cls` / `clear` - Clears the terminal.
 - ⚡ `exit` - Exits the the terminal.
-- ⚡ `facebook` - Takes you to my Facebook profile.
+- ⚡ `facebook` / `fb` - Takes you to my Facebook profile.
 - ⚡ `github` - Takes you to my GitHub profile.
 - ⚡ `linkedin` - Takes you to my LinkedIn profile.
 - ⚡ `quora` - Takes you to my Quora profile.
