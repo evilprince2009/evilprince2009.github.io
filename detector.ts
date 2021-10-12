@@ -4,7 +4,7 @@
  * (logic-module.ts) from main TypeScript source code of the project.
  */
 
-export class LogicModule {
+export class DetectorModule {
   constructor() {}
 
   userIdGenerator(): string {
@@ -29,6 +29,10 @@ export class LogicModule {
       if (input_string[i] !== " ") return false;
     }
     return true;
+  }
+
+  detectNumber(x: any): boolean{
+    return !isNaN(x);
   }
 
   openSocialProfile(siteName: string): void {
