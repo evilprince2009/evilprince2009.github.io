@@ -28,7 +28,7 @@ Tools used:
 - ⚡ `quora` - Takes you to my Quora profile.
 - ⚡ `reload` - Reloads the current Browser window with a new user session & UUID.
 - ⚡ `sudo rm -rf` - Never run this command on terminal.
-- ⚡ ``/` `/` ` - Any whitespace or null value will just render the shell.
+- ⚡ ` ` - Any whitespace of any length or null value will just render the shell.
 
 ### Use commands only from above list
 
