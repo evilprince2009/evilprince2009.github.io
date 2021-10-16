@@ -31,12 +31,32 @@ export class DetectorModule {
     return true;
   }
 
-  detectNumber(x: any): boolean{
+  detectNumber(x: any): boolean {
     return !isNaN(x);
   }
 
   openSocialProfile(siteName: string): void {
     let url: string = `https://www.${siteName}.com/evilprince2009`;
     window.open(url, "_blank");
+  }
+
+  printMessage(msg: string): void {
+    console.log(msg);
+  }
+
+  detectLanguage(): void {
+    const language: string =
+      "This file is hete just detect the language this project is written in.";
+    const message = "Please do not remove this file.";
+    (() => console.log(language))();
+    this.printMessage(message);
+    (() => console.log(language))();
+    this.printMessage(message);
+    (() => console.log(language))();
+    this.printMessage(message);
+    (() => console.log(language))();
+    this.printMessage(message);
+    (() => console.log(language))();
+    this.printMessage(message);
   }
 }
