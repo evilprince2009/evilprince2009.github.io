@@ -5,7 +5,57 @@
  */
 
 export class DetectorModule {
-  constructor() {}
+  constructor(private name: string, private id: number) {}
+
+  detectBrowser(): string {
+    let ua = navigator.userAgent,
+      tem,
+      M =
+        ua.match(
+          /(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i
+        ) || [];
+    if (/trident/i.test(M[1])) {
+      tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+      return "IE " + (tem[1] || "");
+    }
+  }
+
+  // function to detect ip address
+  detectIPAddress(): string {
+    let ip_dups = {};
+    let RTCPeerConnection =
+      window.RTCPeerConnection ||
+      window.mozRTCPeerConnection ||
+      window.webkitRTCPeerConnection;
+    let useWebKit = !!window.webkitRTCPeerConnection;
+    let mediaConstraints = {
+      optional: [{ RtpDataChannels: true }],
+    };
+    let servers = { iceServers: [{ urls: "stun:stun.services.mozilla.com" }] };
+    let pc = new RTCPeerConnection(servers, mediaConstraints);
+    let noop = function () {};
+    let localIPs = {};
+    let ipRegex =
+      /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g;
+    let key;
+    function iterateIP(ip) {
+      if (!ip_dups[ip]) {
+        console.log(ip);
+        ip_dups[ip] = true;
+        localIPs[ip] = true;
+      }
+    }
+    //create a bogus data channel
+    pc.createDataChannel("");
+    // create offer and set local description
+    pc.createOffer(function (sdp) {
+      sdp.sdp.split("\n").forEach(function (line) {
+        if (line.indexOf("candidate") < 0) return;
+        line.match(ipRegex).forEach(iterateIP);
+      });
+      pc.setLocalDescription(sdp, noop, noop);
+    });
+  }
 
   userIdGenerator(): string {
     let dummyText: string = "2xxx  x0xx xx0x xxx9 : x5xx : 1xx9";
