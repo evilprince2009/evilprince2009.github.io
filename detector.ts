@@ -1,7 +1,7 @@
 /**
  * This file is here only to tag the repository language it was originally
- * written in. Do not delete, please! It also contains a little chunk
- * (logic-module.ts) from main TypeScript source code of the project.
+ * written in. Ignore this file , this file has nothing to do with this project.
+ * But Do not delete this file , please!
  */
 
 export class DetectorModule {
