@@ -32,13 +32,9 @@ Tools used:
 
 ### Use commands only from above list
 
-### This is what happens when you type an invalid command
+### This is how it moves
 
-![Invalid Command](https://github.com/evilprince2009/evilprince2009.github.io/blob/main/Screenshots/invalid%20command.png)
-
-Response to `sudo rm -rf` command.
-
-![sudo rm -rf](https://github.com/evilprince2009/evilprince2009.github.io/blob/main/Screenshots/sudo%20rm%20-rf.png)
+![shellfolio](https://github.com/evilprince2009/evilprince2009.github.io/blob/main/Screenshots/image.gif)
 
 ### Note: All commands are case insensitive
 
