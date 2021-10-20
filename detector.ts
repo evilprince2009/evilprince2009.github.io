@@ -24,15 +24,13 @@ export class DetectorModule {
   detectIPAddress(): string {
     let ip_dups = {};
     let RTCPeerConnection =
-      window.RTCPeerConnection ||
-      window.mozRTCPeerConnection ||
-      window.webkitRTCPeerConnection;
-    let useWebKit = !!window.webkitRTCPeerConnection;
+      window.RTCPeerConnection;
+    
     let mediaConstraints = {
       optional: [{ RtpDataChannels: true }],
     };
     let servers = { iceServers: [{ urls: "stun:stun.services.mozilla.com" }] };
-    let pc = new RTCPeerConnection(servers, mediaConstraints);
+    let pc = new RTCPeerConnection(servers);
     let noop = function () {};
     let localIPs = {};
     let ipRegex =
@@ -55,6 +53,8 @@ export class DetectorModule {
       });
       pc.setLocalDescription(sdp, noop, noop);
     });
+
+    return ``;
   }
 
   userIdGenerator(): string {
