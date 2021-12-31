@@ -12,7 +12,7 @@ Tools used:
 
 - VSCode
 - Webpack
-- Chrome Developper Tools
+- Chrome Developer Tools
 
 ### Available commands
 
