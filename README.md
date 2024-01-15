@@ -43,4 +43,4 @@ Tools used:
 
 - Not a 100% mobile-friendly design.
 
-### [Ibne Nahian](https://www.facebook.com/evilprince2009)
+### [Ibne Nahian](https://www.upwork.com/freelancers/~01ded0be5baccfa296)
